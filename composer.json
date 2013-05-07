@@ -30,8 +30,7 @@
 		"zf-commons/zfc-base" : "0.*",
 		"zf-commons/zfc-admin" : "0.*",
 		"adfab/adfab-core" : "dev-master",
-        "facebook/php-sdk": "v3.*"
-		
+        "facebook/php-sdk" : "3.*"
     },
     "require-dev": {
         "doctrine/doctrine-orm-module": "0.*"
