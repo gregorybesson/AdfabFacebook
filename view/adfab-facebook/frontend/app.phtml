@@ -1,0 +1,54 @@
+<div id="facebook">
+	<div class="row-fluid">
+				
+		<h1>F.A.Q</h1>
+		
+<?php foreach($this->facebooks as $facebook):?>
+        <h3><a href="#" id="facebook-title-<?php echo $facebook->getId(); ?>"><?php echo $facebook->getQuestion(); ?></a></h3>
+		<div id="facebook-content-<?php echo $facebook->getId(); ?>" class="content-block">
+			<?php echo $facebook->getAnswer(); ?>
+		</div>
+<?php endforeach; ?>
+		<!--h3><a href="#" id="facebook-title-1">Club Metro, c'est quoi ?</a></h3>
+		<div id="facebook-content-1" class="content-block">
+			<p>Afin de vous remercier de votre fidélité, le quotidien Metro a créé le Club Metro. Ce Club est complètement gratuit, sans aucune obligation et ouvert à tous. Aujourd'hui, le Club Metro compte plus de 480 000 membres qui bénéficient d'avantages et d'offres exclusives. En plus, vous pouvez participer à tous les jeux-concours organisés par le Club et peut-être gagner de magnifiques voyages (Europe, Tahiti, Nouvelle Calédonie, Afrique du Sud, ...), des cadeaux inédits (remboursement des impôts, relookings, des places VIP pour des évènements ou des rencontres avec des stars...)</p>
+			<p>Vite, devenez membre, c'est gratuit!</p>
+		</div>
+		
+		<h3><a href="#" id="facebook-title-2">Qui peut devenir membre du Club Metro ?</a></h3>
+		<div id="facebook-content-2" class="content-block">
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tincidunt justo quis ante mollis eleifend. Pellentesque ultricies hendrerit ornare. Nunc sed odio eu turpis pulvinar tempor. Donec sagittis laoreet tempor. Sed rutrum tortor vitae mauris pretium sed porta urna feugiat. In quis augue elit. Etiam adipiscing quam faucibus nisi dignissim hendrerit. Sed sollicitudin congue tellus vitae tempus. Fusce sit amet nibh nisi, a tincidunt augue. Etiam vel auctor leo.</p>
+			<p>Suspendisse rutrum tellus vitae dui suscipit vehicula. Mauris massa nibh, venenatis at consequat porttitor, suscipit ac sem. Morbi augue magna, bibendum vitae lacinia sed, aliquet at turpis. Nulla sed lorem nisi. Phasellus luctus ornare nisl. Cras congue orci dui. Vestibulum tristique tortor ac ligula mattis sed euismod ipsum hendrerit.</p>
+		</div>
+		
+		<h3><a href="#" id="facebook-title-3">Comment puis-je devenir membre ?</a></h3>
+		<div id="facebook-content-3" class="content-block">
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tincidunt justo quis ante mollis eleifend. Pellentesque ultricies hendrerit ornare. Nunc sed odio eu turpis pulvinar tempor. Donec sagittis laoreet tempor. Sed rutrum tortor vitae mauris pretium sed porta urna feugiat. In quis augue elit. Etiam adipiscing quam faucibus nisi dignissim hendrerit. Sed sollicitudin congue tellus vitae tempus. Fusce sit amet nibh nisi, a tincidunt augue. Etiam vel auctor leo.</p>
+			<p>Suspendisse rutrum tellus vitae dui suscipit vehicula. Mauris massa nibh, venenatis at consequat porttitor, suscipit ac sem. Morbi augue magna, bibendum vitae lacinia sed, aliquet at turpis. Nulla sed lorem nisi. Phasellus luctus ornare nisl. Cras congue orci dui. Vestibulum tristique tortor ac ligula mattis sed euismod ipsum hendrerit.</p>
+		</div>
+
+		<h3><a href="#" id="facebook-title-4">Comment puis-je bénéficier des offres ou participer aux jeux-concours ?</a></h3>
+		<div id="facebook-content-4" class="content-block">
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tincidunt justo quis ante mollis eleifend. Pellentesque ultricies hendrerit ornare. Nunc sed odio eu turpis pulvinar tempor. Donec sagittis laoreet tempor. Sed rutrum tortor vitae mauris pretium sed porta urna feugiat. In quis augue elit. Etiam adipiscing quam faucibus nisi dignissim hendrerit. Sed sollicitudin congue tellus vitae tempus. Fusce sit amet nibh nisi, a tincidunt augue. Etiam vel auctor leo.</p>
+			<p>Suspendisse rutrum tellus vitae dui suscipit vehicula. Mauris massa nibh, venenatis at consequat porttitor, suscipit ac sem. Morbi augue magna, bibendum vitae lacinia sed, aliquet at turpis. Nulla sed lorem nisi. Phasellus luctus ornare nisl. Cras congue orci dui. Vestibulum tristique tortor ac ligula mattis sed euismod ipsum hendrerit.</p>
+		</div>
+
+		<h3><a href="#" id="facebook-title-5">J'ai oublié mon mot de passe, que faire ?</a></h3>
+		<div id="facebook-content-5" class="content-block">
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tincidunt justo quis ante mollis eleifend. Pellentesque ultricies hendrerit ornare. Nunc sed odio eu turpis pulvinar tempor. Donec sagittis laoreet tempor. Sed rutrum tortor vitae mauris pretium sed porta urna feugiat. In quis augue elit. Etiam adipiscing quam faucibus nisi dignissim hendrerit. Sed sollicitudin congue tellus vitae tempus. Fusce sit amet nibh nisi, a tincidunt augue. Etiam vel auctor leo.</p>
+			<p>Suspendisse rutrum tellus vitae dui suscipit vehicula. Mauris massa nibh, venenatis at consequat porttitor, suscipit ac sem. Morbi augue magna, bibendum vitae lacinia sed, aliquet at turpis. Nulla sed lorem nisi. Phasellus luctus ornare nisl. Cras congue orci dui. Vestibulum tristique tortor ac ligula mattis sed euismod ipsum hendrerit.</p>
+		</div>
+		
+		<h3><a href="#" id="facebook-title-6">J'ai changé d'adresse, que faire ?</a></h3>
+		<div id="facebook-content-6" class="content-block">
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tincidunt justo quis ante mollis eleifend. Pellentesque ultricies hendrerit ornare. Nunc sed odio eu turpis pulvinar tempor. Donec sagittis laoreet tempor. Sed rutrum tortor vitae mauris pretium sed porta urna feugiat. In quis augue elit. Etiam adipiscing quam faucibus nisi dignissim hendrerit. Sed sollicitudin congue tellus vitae tempus. Fusce sit amet nibh nisi, a tincidunt augue. Etiam vel auctor leo.</p>
+			<p>Suspendisse rutrum tellus vitae dui suscipit vehicula. Mauris massa nibh, venenatis at consequat porttitor, suscipit ac sem. Morbi augue magna, bibendum vitae lacinia sed, aliquet at turpis. Nulla sed lorem nisi. Phasellus luctus ornare nisl. Cras congue orci dui. Vestibulum tristique tortor ac ligula mattis sed euismod ipsum hendrerit.</p>
+		</div>
+
+		<h3><a href="#" id="facebook-title-7">Vous n'avez pas la réponse à votre question ?</a></h3>
+		<div id="facebook-content-7" class="content-block">
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tincidunt justo quis ante mollis eleifend. Pellentesque ultricies hendrerit ornare. Nunc sed odio eu turpis pulvinar tempor. Donec sagittis laoreet tempor. Sed rutrum tortor vitae mauris pretium sed porta urna feugiat. In quis augue elit. Etiam adipiscing quam faucibus nisi dignissim hendrerit. Sed sollicitudin congue tellus vitae tempus. Fusce sit amet nibh nisi, a tincidunt augue. Etiam vel auctor leo.</p>
+			<p>Suspendisse rutrum tellus vitae dui suscipit vehicula. Mauris massa nibh, venenatis at consequat porttitor, suscipit ac sem. Morbi augue magna, bibendum vitae lacinia sed, aliquet at turpis. Nulla sed lorem nisi. Phasellus luctus ornare nisl. Cras congue orci dui. Vestibulum tristique tortor ac ligula mattis sed euismod ipsum hendrerit.</p>
+		</div-->
+	</div><!-- END .row-fluid -->
+</div><!-- END Appli -->
