@@ -1,13 +1,13 @@
 {
-    "name": "adfab/adfab-facebook",
+    "name": "adfab/facebook",
     "description": "A module to manage Facebook apps for AdFab ZF2 dev",
     "type": "library",
     "license": "BSD-3-Clause",
     "keywords": [
         "zf2",
         "playground",
-        "adfab-facebook",
-        "FAQ"
+        "adfab",
+        "Facebook"
     ],
     "homepage": "https://github.com/gregorybesson/AdfabFacebook",
     "authors": [
@@ -29,7 +29,7 @@
 		"doctrine/doctrine-orm-module" : "*",
 		"zf-commons/zfc-base" : "0.*",
 		"zf-commons/zfc-admin" : "0.*",
-		"adfab/adfab-core" : "dev-master",
+		"adfab/core" : "dev-master",
         "facebook/php-sdk" : "3.*"
     },
     "require-dev": {
