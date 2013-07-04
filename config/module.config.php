@@ -47,16 +47,20 @@ return array(
 
     'router' => array(
         'routes' => array(
-            'facebook' => array(
-                'type' => 'Zend\Mvc\Router\Http\Segment',
-                'options' => array(
-                    'route'    => '/face-book',
-                    'defaults' => array(
-                        'controller' => 'adfabfacebook',
-                        'action'     => 'index',
-                    ),
-                ),
-            ),
+        	'frontend' => array(
+        		'child_routes' => array(
+		            'facebook' => array(
+		                'type' => 'Zend\Mvc\Router\Http\Segment',
+		                'options' => array(
+		                    'route'    => '/face-book',
+		                    'defaults' => array(
+		                        'controller' => 'adfabfacebook',
+		                        'action'     => 'index',
+		                    ),
+		                ),
+		            ),
+        		),
+        	),
             'zfcadmin' => array(
                 'child_routes' => array(
                     'adfabfacebook_admin_app' => array(
