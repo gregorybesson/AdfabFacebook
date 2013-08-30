@@ -31,10 +31,10 @@ return array(
 
     'view_manager' => array(
         'template_map' => array(
-            'adfab-facebook/index/index' => __DIR__ .  '/../view/adfab-facebook/frontend/app.phtml',
         ),
         'template_path_stack' => array(
-            'adfabfacebook' => __DIR__ . '/../view',
+            __DIR__ . '/../view/admin',
+        	__DIR__ . '/../view/frontend',
         ),
     ),
 

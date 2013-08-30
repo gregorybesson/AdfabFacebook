@@ -155,9 +155,9 @@ class Module
             $urlHelper = $e->getTarget()->getServiceManager()->get('viewhelpermanager')->get('Url');
 
             if (! $fbDomain) {
-                $pageTabUrl = $urlHelper($game->getClassType(), array('id' => $game->getIdentifier()), array('force_canonical' => true));
+                $pageTabUrl = $urlHelper('frontend/' . $game->getClassType(), array('id' => $game->getIdentifier()), array('force_canonical' => true));
             } else {
-                $pageTabUrl = 'http://' . $fbDomain . $urlHelper($game->getClassType(), array('id' => $game->getIdentifier()));
+                $pageTabUrl = 'http://' . $fbDomain . $urlHelper('frontend/' . $game->getClassType(), array('id' => $game->getIdentifier()));
             }
 
             // What a hack :(  wanted to change the scheme with the helper... Not that simple...
