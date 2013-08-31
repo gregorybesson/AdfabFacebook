@@ -1,7 +1,7 @@
 <?php $this->plugin('translate')->setTranslatorTextDomain('adfabfacebook'); ?>
 
 <ul class="liste-buttons">
-	<li class="btn-admin"><a href="<?php echo $this->url('zfcadmin/adfabfacebook_admin_app/create');?>"><?php echo $this->translate('Ajouter une Appli Facebook'); ?></a></li>
+	<li class="btn-admin"><a href="<?php echo $this->url('admin/adfabfacebook_admin_app/create');?>"><?php echo $this->translate('Ajouter une Appli Facebook'); ?></a></li>
 </ul>
 
 <h1>Liste des applis</h1>
@@ -26,10 +26,10 @@
         <th></th>
     </tr>
     <?php foreach ($this->apps as $app): ?>
-        <?php $installLink = $this->url('zfcadmin/adfabfacebook_admin_app/install', array('appId' => $app['object_id']));?>
-        <?php $uninstallLink = $this->url('zfcadmin/adfabfacebook_admin_app/uninstall', array('appId' => $app['object_id']));?>
-        <?php $editLink = $this->url('zfcadmin/adfabfacebook_admin_app/edit', array('appId' => $app['object_id']));?>
-        <?php $deleteLink = $this->url('zfcadmin/adfabfacebook_admin_app/remove', array('appId' => $app['object_id']));?>
+        <?php $installLink = $this->url('admin/adfabfacebook_admin_app/install', array('appId' => $app['object_id']));?>
+        <?php $uninstallLink = $this->url('admin/adfabfacebook_admin_app/uninstall', array('appId' => $app['object_id']));?>
+        <?php $editLink = $this->url('admin/adfabfacebook_admin_app/edit', array('appId' => $app['object_id']));?>
+        <?php $deleteLink = $this->url('admin/adfabfacebook_admin_app/remove', array('appId' => $app['object_id']));?>
         <tr>
             <td><?php echo $app['id'] ?></td>
             <td><a href="<?php echo $app['link'] ?>" target="_blank"><?php echo $app['name'] ?></a></td>
@@ -60,7 +60,7 @@
 </table>
 
 <ul class="liste-buttons bottom">
-	<li class="btn-admin bottom"><a href="<?php echo $this->url('zfcadmin/adfabfacebook_admin_app/create');?>"><?php echo $this->translate('Ajouter une Appli Facebook'); ?></a></li>
+	<li class="btn-admin bottom"><a href="<?php echo $this->url('admin/adfabfacebook_admin_app/create');?>"><?php echo $this->translate('Ajouter une Appli Facebook'); ?></a></li>
 </ul>
 
 <?php //echo $this->paginationControl($this->apps, 'Sliding', 'adfab-facebook/admin/pagination_applist.phtml'); ?>

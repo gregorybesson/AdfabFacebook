@@ -1,34 +1,38 @@
 {
-    "name": "adfab/facebook",
-    "description": "A module to manage Facebook apps for AdFab ZF2 dev",
-    "type": "library",
-    "license": "BSD-3-Clause",
-    "keywords": [
-        "zf2",
-        "playground",
-        "adfab",
-        "Facebook"
-    ],
-    "homepage": "https://github.com/gregorybesson/AdfabFacebook",
-    "authors": [
-        {
-            "name": "Greg Besson",
-            "email": "gregory.besson@adfab.fr",
-            "homepage": "http://www.adfab.fr"
-        }
-    ],
-    "minimum-stability": "dev",
-    "require": {
-        "php": ">=5.3.3",
+	"name" : "adfab/facebook",
+	"description" : "A module to manage Facebook apps for AdFab ZF2 dev",
+	"type" : "library",
+	"authors" : [{
+			"name" : "Greg Besson",
+			"email" : "gregory.besson@adfab.fr",
+			"homepage" : "http://www.adfab.fr"
+		}
+	],
+	"keywords" : [
+		"zf2",
+		"playground",
+		"adfab",
+		"Facebook"
+	],
+	"homepage" : "https://github.com/gregorybesson/AdfabFacebook",
+	"license" : [
+		"BSD-3-Clause"
+	],
+	"require" : {
+		"doctrine/doctrine-orm-module" : "*",
+		"zendframework/zend-stdlib" : "~2.1",
+		"facebook/php-sdk" : "3.*",
+		"php" : ">=5.3.3",
+		"zf-commons/zfc-base" : "0.*",
 		"zendframework/zend-mvc" : "~2.1",
 		"zendframework/zend-form" : "~2.1",
 		"zendframework/zend-loader" : "~2.1",
 		"zendframework/zend-servicemanager" : "~2.1",
+		"adfab/core" : "0.*",
 		"zendframework/zend-modulemanager" : "~2.1",
 		"zendframework/zend-stdlib" : "~2.1",
 		"doctrine/doctrine-orm-module" : "*",
 		"zf-commons/zfc-base" : "0.*",
-		"zf-commons/zfc-admin" : "0.*",
 		"adfab/core" : "0.*",
         "facebook/php-sdk" : "3.*"
     }, 
@@ -39,5 +43,6 @@
 		"psr-0" : {
 			"AdfabFacebook" : "src/"
 		}
-	}
+	},
+	"minimum-stability" : "dev"
 }

@@ -47,17 +47,21 @@ return array(
 
     'router' => array(
         'routes' => array(
-            'facebook' => array(
-                'type' => 'Zend\Mvc\Router\Http\Segment',
-                'options' => array(
-                    'route'    => '/face-book',
-                    'defaults' => array(
-                        'controller' => 'adfabfacebook',
-                        'action'     => 'index',
-                    ),
-                ),
-            ),
-            'zfcadmin' => array(
+        	'frontend' => array(
+        		'child_routes' => array(
+		            'facebook' => array(
+		                'type' => 'Zend\Mvc\Router\Http\Segment',
+		                'options' => array(
+		                    'route'    => '/face-book',
+		                    'defaults' => array(
+		                        'controller' => 'adfabfacebook',
+		                        'action'     => 'index',
+		                    ),
+		                ),
+		            ),
+        		),
+        	),
+            'admin' => array(
                 'child_routes' => array(
                     'adfabfacebook_admin_app' => array(
                         'type' => 'Literal',
@@ -149,6 +153,11 @@ return array(
             'children_views' => array(
                 'col_left'  => 'adfab-user/layout/col-user.phtml',
             ),
+        	'controllers' => array(
+        		'adfabfacebook_admin_app' => array(
+        			'default_layout' => 'application/layout/admin/admin',
+       			),
+        	),
         ),
     ),
 
@@ -157,19 +166,19 @@ return array(
             'adfabfacebookadmin' => array(
                 'order' => 70,
                 'label' => 'Facebook',
-                'route' => 'zfcadmin/adfabfacebook_admin_app/list',
+                'route' => 'admin/adfabfacebook_admin_app/list',
                 'resource' => 'facebook',
                 'privilege' => 'list',
                 'pages' => array(
                     'list' => array(
                             'label' => 'Liste des Applis',
-                            'route' => 'zfcadmin/adfabfacebook_admin_app/list',
+                            'route' => 'admin/adfabfacebook_admin_app/list',
                             'resource' => 'facebook',
                             'privilege' => 'list',
                     ),
                     'create' => array(
                         'label' => 'Nouvelle Appli',
-                        'route' => 'zfcadmin/adfabfacebook_admin_app/create',
+                        'route' => 'admin/adfabfacebook_admin_app/create',
                         'resource' => 'facebook',
                         'privilege' => 'add',
                     ),

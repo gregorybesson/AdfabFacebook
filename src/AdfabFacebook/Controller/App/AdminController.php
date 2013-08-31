@@ -76,7 +76,7 @@ class AdminController extends AbstractActionController
                 $app_details['id'] = 'Cette application n\'existe plus. Vous devriez la supprimer';
                 $app_details['custom_name'] = '';
                 $app_details['logo'] = '';
-                $app_details['link'] = $this->url()->fromRoute('zfcadmin/adfabfacebook_admin_app/remove', array('appId' => $app->getId()));
+                $app_details['link'] = $this->url()->fromRoute('admin/adfabfacebook_admin_app/remove', array('appId' => $app->getId()));
 
             }
             // Get informations from the Page. Logged user has to be admin of the page.
@@ -138,7 +138,7 @@ class AdminController extends AbstractActionController
     {
         $form = $this->getServiceLocator()->get('adfabfacebook_app_form');
         $form->get('submit')->setLabel('Créer');
-        $form->setAttribute('action', $this->url()->fromRoute('zfcadmin/adfabfacebook_admin_app/create', array('appId' => 0)));
+        $form->setAttribute('action', $this->url()->fromRoute('admin/adfabfacebook_admin_app/create', array('appId' => 0)));
         $form->setAttribute('method', 'post');
 
         $app = new \AdfabFacebook\Entity\App();
@@ -152,7 +152,7 @@ class AdminController extends AbstractActionController
             if ($app) {
                 $this->flashMessenger()->setNamespace('adfabfacebook')->addMessage('L\'appli FB a été créée');
 
-                return $this->redirect()->toRoute('zfcadmin/adfabfacebook_admin_app/list');
+                return $this->redirect()->toRoute('admin/adfabfacebook_admin_app/list');
             }
         }
 
@@ -167,7 +167,7 @@ class AdminController extends AbstractActionController
         $appId = $this->getEvent()->getRouteMatch()->getParam('appId');
         $app = $this->getAppMapper()->findById($appId);
         $form = $this->getServiceLocator()->get('adfabfacebook_app_form');
-        $form->setAttribute('action', $this->url()->fromRoute('zfcadmin/adfabfacebook_admin_app/edit', array('appId' => $appId)));
+        $form->setAttribute('action', $this->url()->fromRoute('admin/adfabfacebook_admin_app/edit', array('appId' => $appId)));
         $form->setAttribute('method', 'post');
 
         $form->bind($app);
@@ -179,7 +179,7 @@ class AdminController extends AbstractActionController
             if ($app) {
                 $this->flashMessenger()->setNamespace('adfabfacebook')->addMessage('La Appli a été créée');
 
-                return $this->redirect()->toRoute('zfcadmin/adfabfacebook_admin_app/list');
+                return $this->redirect()->toRoute('admin/adfabfacebook_admin_app/list');
             }
         }
 
@@ -198,7 +198,7 @@ class AdminController extends AbstractActionController
             $this->flashMessenger()->setNamespace('adfabfacebook')->addMessage('Appli supprimée');
         }
 
-        return $this->redirect()->toRoute('zfcadmin/adfabfacebook_admin_app/list');
+        return $this->redirect()->toRoute('admin/adfabfacebook_admin_app/list');
     }
 
     public function installAction()
@@ -273,7 +273,7 @@ class AdminController extends AbstractActionController
             return $this->redirect()->toUrl($loginUrl);
         }
 
-        return $this->redirect()->toRoute('zfcadmin/adfabfacebook_admin_app/list');
+        return $this->redirect()->toRoute('admin/adfabfacebook_admin_app/list');
     }
 
     public function uninstallAction()
@@ -328,7 +328,7 @@ class AdminController extends AbstractActionController
             return $this->redirect()->toUrl($loginUrl);
         }
 
-        return $this->redirect()->toRoute('zfcadmin/adfabfacebook_admin_app/list');
+        return $this->redirect()->toRoute('admin/adfabfacebook_admin_app/list');
     }
 
     public function setOptions(ModuleOptions $options)
