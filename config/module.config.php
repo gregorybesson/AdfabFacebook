@@ -168,7 +168,7 @@ return array(
                 'label' => 'Facebook',
                 'route' => 'admin/adfabfacebook_admin_app/list',
                 'resource' => 'facebook',
-                'privilege' => 'list',
+                'privilege' => 'list', 
                 'pages' => array(
                     'list' => array(
                             'label' => 'Liste des Applis',
