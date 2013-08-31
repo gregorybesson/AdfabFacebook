@@ -155,7 +155,7 @@ return array(
             ),
         	'controllers' => array(
         		'adfabfacebook_admin_app' => array(
-        			'default_layout' => 'application/layout/admin/admin',
+        			'default_layout' => 'layout/admin',
        			),
         	),
         ),

@@ -10,7 +10,6 @@ return array(
     	'ZfcBase',
    		'AdfabCore',
     	'AdfabFacebook',
-        'Application',
     ),
     'module_listener_options' => array(
         'config_glob_paths'    => array(
